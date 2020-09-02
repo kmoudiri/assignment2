@@ -27,6 +27,16 @@ public class SimpleRetailStore implements IStore{
         return totalBuyBalance;
     }
 
+    @Override
+    public void getInventory() {
+
+    }
+
+    @Override
+    public void reset() {
+
+    }
+
     public void setTotalBuyBalance(double totalBuyBalance) {
         this.totalBuyBalance = totalBuyBalance;
     }

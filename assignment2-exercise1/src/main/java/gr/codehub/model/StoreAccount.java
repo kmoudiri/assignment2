@@ -22,4 +22,11 @@ public class StoreAccount extends Account{
         changeCategory(category);
     }
 
+    public String getStoreName() {
+        return storeName;
+    }
+
+    public Category getAccountCategory() {
+        return accountCategory;
+    }
 }

@@ -28,16 +28,26 @@ public class Account {
     }
 
     public void testerAccount(int selection, double amount) {
-        if (selection == 1) {
+        if (selection == 1) {           //withdraw
             System.out.println("Amount to withdraw: " + amount);
             withdraw(amount);
             System.out.println("New balance: " + balance + ". Number of Transactions: " + numberOfTransactions);
-        } else if (selection == 2) {
+        } else if (selection == 2) {    //deposit
             System.out.println("Amount to deposit: " + amount);
             deposit(amount);
             System.out.println("New balance: " + balance + ". Number of Transactions: " + numberOfTransactions);
         }
     }
 
+    public String getOwner() {
+        return owner;
+    }
 
+    public Double getBalance() {
+        return balance;
+    }
+
+    public int getNumberOfTransactions() {
+        return numberOfTransactions;
+    }
 }
