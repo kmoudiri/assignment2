@@ -12,6 +12,7 @@ public class InventoryRetailStore extends SimpleRetailStore implements IStore {
 
     @Override
     public void getInventory() {
+        System.out.println("Print the inventory: ");
         productList.stream()
                 .map(p -> p.getName())
                 .forEach(System.out::println);
@@ -32,8 +33,14 @@ public class InventoryRetailStore extends SimpleRetailStore implements IStore {
 
     @Override
     public void sell(Product product) {
-        super.sell(product);
-        productList.remove(product);
+        if (productList.contains(product)) {
+            super.sell(product);
+            productList.remove(product);
+        } else {
+            System.out.println("There is not product: \"" + product.getName() + "\" to store! CANT SELL");
+
+        }
+
     }
 
 }
